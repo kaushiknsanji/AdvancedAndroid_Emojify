@@ -42,6 +42,7 @@ import java.io.IOException;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.share_button) FloatingActionButton mShareFab;
     @BindView(R.id.save_button) FloatingActionButton mSaveFab;
     @BindView(R.id.clear_button) FloatingActionButton mClearFab;
-
     @BindView(R.id.title_text_view) TextView mTitleTextView;
 
     private String mTempPhotoPath;
@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
         // Bind the views
         ButterKnife.bind(this);
 
-        // TODO (2): Set up Timber
+        // COMPLETED (2): Set up Timber
+        Timber.plant(new Timber.DebugTree());
     }
 
     /**
